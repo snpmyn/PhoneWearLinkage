@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--#FFBB86FC-->
+    <color name="purple_200">#3AAEFF</color>
+    <!--#FF6200EE-->
+    <color name="purple_500">#3AAEFF</color>
+    <!--#FF3700B3-->
+    <color name="purple_700">#3AAEFF</color>
+    <!--#FF03DAC5-->
+    <color name="teal_200">#3AAEFF</color>
+    <!--#FF018786-->
+    <color name="teal_700">#3AAEFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Customize your theme here. -->
+    <color name="red">#EB6B6B</color>
+
+    <color name="color_91B2F5">#91B2F5</color>
+    <color name="color_6AAEFF">#6AAEFF</color>
+    <color name="color_0579F5">#0579F5</color>
+    <color name="color_FF9502">#FF9502</color>
+</resources>

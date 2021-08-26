@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".module.outlets.OutletListActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/outletListActivityMt"
+        style="@style/Widget.MaterialComponents.Toolbar.Surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_font_input_24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/networkLineUp"
+            android:textColor="@color/fontInput"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:id="@+id/outletListActivityRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/outletListActivityMt">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/outletListActivitySv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_toStartOf="@id/outletsListActivityTv"
+            android:background="@drawable/gray_solid_r6"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/pleaseInput" />
+
+        <TextView
+            android:id="@+id/outletsListActivityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/search"
+            android:textColor="@color/fontInput"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/outletListActivityRv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outletListActivityRl" />
+</androidx.constraintlayout.widget.ConstraintLayout>

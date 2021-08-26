@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.cash.WithdrawOrderActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/withdrawOrderActivityMt"
+        style="@style/Widget.MaterialComponents.Toolbar.Surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_font_input_24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/withdrawOrder"
+            android:textColor="@color/fontInput"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/pageBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/withdrawOrderActivityMt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/documentType"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/documentNumber"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/appointmentOutlet"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nameContent"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/documentTypeContent"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/documentNumberContent"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/withdrawOrderActivityTvAppointmentOutlet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:textColor="@color/fontHint"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="@string/appointmentOutletContent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/white_solid_r6"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="@string/contactNumber"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/contactNumberContent"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="@string/useToAcceptAppointmentTextMessages"
+                android:textColor="@color/fontHint"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/white_solid_r6"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/withdrawAmount"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+                <com.chaos.widget.textview.DrawableCenterTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:drawableStart="@drawable/ic_arrow_drop_down_font_hint_16dp"
+                    android:drawablePadding="@dimen/dp_2"
+                    android:gravity="center_vertical"
+                    android:text="@string/withdrawAmountHintTop"
+                    android:textColor="@color/fontHint"
+                    android:textSize="@dimen/sp_10" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/withdrawAmountHint"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:text="@string/withdrawAmountContent"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/fontHint"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18"
+                android:text="@string/withdrawAmountHintBottom"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/white_solid_r6"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/withdrawOrderActivityRlDrawUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_18"
+                    android:paddingRight="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_18">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/drawUse"
+                        android:textColor="@color/fontInput"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <com.chaos.widget.textview.DrawableCenterTextView
+                        android:id="@+id/withdrawOrderActivityDctvDrawUse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:drawableEnd="@drawable/ic_arrow_forward_ios_font_input_16dp"
+                        android:drawablePadding="@dimen/dp_6"
+                        android:gravity="center_vertical"
+                        android:text="@string/pleaseChoose"
+                        android:textColor="@color/fontInput"
+                        android:textSize="@dimen/sp_14"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:id="@+id/withdrawOrderActivityRlDrawAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_18"
+                    android:paddingRight="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_18">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/drawAccountNumber"
+                        android:textColor="@color/fontInput"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <com.chaos.widget.textview.DrawableCenterTextView
+                        android:id="@+id/withdrawOrderActivityDctvDrawAccountNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:drawableEnd="@drawable/ic_arrow_forward_ios_font_input_16dp"
+                        android:drawablePadding="@dimen/dp_6"
+                        android:gravity="center_vertical"
+                        android:text="@string/pleaseChoose"
+                        android:textColor="@color/fontInput"
+                        android:textSize="@dimen/sp_14"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/availableBalance"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/availableBalanceContent"
+                    android:textColor="@color/color_FF9502"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/withdrawOrderActivityRlAppointmentTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/white_solid_r6"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/appointmentTime"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.chaos.widget.textview.DrawableCenterTextView
+                    android:id="@+id/withdrawOrderActivityDctvAppointmentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@drawable/ic_arrow_forward_ios_font_input_16dp"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center_vertical"
+                    android:text="@string/pleaseChoose"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/white_solid_r6"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:id="@+id/withdrawOrderActivityTvIdentifyCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/identifyCode"
+                    android:textColor="@color/fontInput"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/withdrawOrderActivityIvIdentifyCode"
+                    android:layout_toEndOf="@+id/withdrawOrderActivityTvIdentifyCode"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/pleaseInput"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:text="@string/identifyCodeContent"
+                    android:textColor="@color/fontInput"
+                    android:textColorHint="@color/fontHint"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:id="@+id/withdrawOrderActivityIvIdentifyCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/toDo"
+                    android:src="@drawable/identify_code" />
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mainActivityMbEnsure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12"
+                android:text="@string/ensure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/mainActivityTvAppointmentRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_90"
+                android:gravity="end"
+                android:text="@string/appointmentRecord"
+                android:textColor="@color/color_0579F5"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

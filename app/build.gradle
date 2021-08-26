@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'com.huawei.agconnect'
+}
+
+// Creates a variable called keystorePropertiesFile, and initializes it to the keystore.properties file.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+// Initializes a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+// Loads the keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdk rootProject.ext.android["compileSdk"]
+
+    defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
+        minSdk rootProject.ext.android["minSdk"]
+        targetSdk rootProject.ext.android["targetSdk"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            keyAlias = keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storePassword keystoreProperties['storePassword']
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.compileOptions["sourceCompatibility"]
+        targetCompatibility rootProject.ext.compileOptions["targetCompatibility"]
+    }
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+}
+
+dependencies {
+    implementation 'com.github.snpmyn.Chaos:litepool:v0.0.15.6-alpha'
+    /*chaos*/
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    /*ButterKnife*/
+    implementation 'org.jetbrains:annotations:20.1.0'
+    /*annotations*/
+    implementation 'com.huawei.hms:wearengine:5.0.1.302'
+    /*WeareNgine*/
+    debugImplementation 'com.glance.guolindev:glance:1.0.0'
+    /*glance*/
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    /*LeakCanary*/
+}

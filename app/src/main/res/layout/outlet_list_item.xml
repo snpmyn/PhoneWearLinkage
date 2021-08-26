@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardElevation="@dimen/dp_6"
+    app:contentPaddingBottom="@dimen/dp_18"
+    app:contentPaddingLeft="@dimen/dp_12"
+    app:contentPaddingRight="@dimen/dp_12"
+    app:contentPaddingTop="@dimen/dp_18">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/outletListItemTvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fontInput"
+            android:textSize="@dimen/sp_14"
+            tools:text="西安南郊唐都医院支行" />
+
+        <com.chaos.widget.textview.DrawableCenterTextView
+            android:id="@+id/outletListItemDctvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:drawableStart="@drawable/ic_location_on_font_hint_16dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:textColor="@color/fontInput"
+            android:textSize="@dimen/sp_12"
+            tools:text="西安市东湖路（中新浐灞半岛A6区腾讯大厦旁）" />
+
+        <com.chaos.widget.textview.DrawableCenterTextView
+            android:id="@+id/outletListItemDctvContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_local_phone_font_hint_16dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_0579F5"
+            android:textSize="@dimen/sp_10"
+            tools:text="029-88526525" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

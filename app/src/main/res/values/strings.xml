@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">PhoneWearLinkage</string>
+    <string name="fileProviderAuthorities">com.bocop.fem.fileprovider</string>
+    <string name="pageInnerTitle">Bound Device List</string>
+    <string name="peer_pkg_name">AppPkgName:</string>
+    <string name="dest_message">MsgContent:</string>
+    <string name="get_device">getBoundDevices</string>
+    <string name="ping">pingApp</string>
+    <string name="send_message">sendMsg</string>
+    <string name="receive_message">receiveMsg</string>
+    <string name="send_file">sendFile</string>
+    <string name="cancel_receive_message">cancelReceiverMsg</string>
+    <string name="clear_log">clearPrint</string>
+    <string name="log_output">resultPrint:</string>
+    <string name="cancel_monitor_report">removeMonitor</string>
+    <string name="receive_monitor_report">addMonitor</string>
+    <string name="device_manager_description">Obtains bound devices:</string>
+    <string name="p2p_manager_description">P2P communication and Msg management:</string>
+    <string name="monitor_manager_description">Registering or unregistering a listener for monitoring the connection status:</string>
+    <string name="sensor_text">Sensor</string>
+    <string name="notify_text">Notification</string>
+    <string name="sync_read_sensor_data">Async reading sensor data</string>
+    <string name="stop_read_sensor_data">Stop reading sensor data</string>
+    <string name="sensor_list_text">Obtains the sensor list</string>
+    <string name="sensor_list_title">Sensor list:</string>
+    <string name="optional_button_style">Optional. The value ranges from 50 to 53, and 50 to 53 correspond to 0 to 3 buttons in the notification.</string>
+    <string name="notify_template">Styles：</string>
+    <string name="notify_package_name">PkgName：</string>
+    <string name="notify_title">Title：</string>
+    <string name="notify_content">Content：</string>
+    <string name="notify_button_first">Button 1：</string>
+    <string name="notify_button_second">Button 2：</string>
+    <string name="notify_button_third">Button 3：</string>
+    <string name="notify_send">Send Notification</string>
+    <string name="mandatory">Mandatory</string>
+    <string name="optional">Optional</string>
+    <string name="current_available_device">Device：</string>
+
+    <string name="toDo">TODO</string>
+    <!--闪屏页-->
+    <string name="suggestToAllowThesePermissions">建议授权这些权限</string>
+    <string name="cancel">取消</string>
+    <string name="agree">同意</string>
+    <!--主页-->
+    <string name="stepOutletsFail">初始化网点失败</string>
+    <string name="networkLineUp">网点排队</string>
+    <string name="chooseOtherOutlets">选择其它网点</string>
+    <string name="currentDistance">当前距离</string>
+    <string name="queQueue">排队人数</string>
+    <string name="contactNumber">联系电话</string>
+    <string name="takeNumberImmediately">立即取号</string>
+    <string name="upgradeFail">更新失败</string>
+    <!--网点列表页-->
+    <string name="pleaseInput">请输入</string>
+    <string name="search">搜索</string>
+    <!--取现预约页-->
+    <string name="withdrawOrder">取现预约</string>
+    <string name="name">姓名</string>
+    <string name="documentType">证件类型</string>
+    <string name="documentNumber">证件号码</string>
+    <string name="appointmentOutlet">预约网点</string>
+    <string name="nameContent">张三</string>
+    <string name="documentTypeContent">身份证</string>
+    <string name="documentNumberContent">6*****************8</string>
+    <string name="appointmentOutletContent">西安南郊唐都医院支行</string>
+    <string name="contactNumberContent">138 5555 8555</string>
+    <string name="useToAcceptAppointmentTextMessages">用于接收预约短信</string>
+    <string name="withdrawAmount">取款金额</string>
+    <string name="withdrawAmountHintTop">十万位</string>
+    <string name="withdrawAmountHint">100,000.00 元起</string>
+    <string name="withdrawAmountContent">500,000.00</string>
+    <string name="withdrawAmountHintBottom">取现金额小于 100,000.00 的不需要预约</string>
+    <string name="drawUse">取款用途</string>
+    <string name="pleaseChoose">请选择</string>
+    <string name="drawAccountNumber">取款账号</string>
+    <string name="availableBalance">可用余额：</string>
+    <string name="availableBalanceContent">人民币元 50,000,000.00</string>
+    <string name="appointmentTime">预约时间</string>
+    <string name="identifyCode">验证码</string>
+    <string name="identifyCodeContent">7961</string>
+    <string name="ensure">确定</string>
+    <string name="appointmentRecord">预约记录</string>
+    <string name="pleaseChooseDrawUse">请选择取款用途</string>
+    <string name="pleaseChooseDrawAccountNumber">请选择取款账号</string>
+    <string name="pleaseChooseAppointmentTime">请选择预约时间</string>
+    <string name="appointing">预约中</string>
+    <string name="pleaseWaitAndSee">敬请期待～</string>
+    <!--取现预约结果页-->
+    <string name="handleResult">操作结果</string>
+    <string name="appointmentSubmitSuccessful">预约提交成功</string>
+    <string name="appointmentSubmitSuccessfulContent">您已提交预约中国银行西安南郊唐都医院支行2020年08月12日（周三）的大额取现业务，待网点确认，最终预约状态以确认短信为准。</string>
+    <string name="appointmentNumber">预约编号</string>
+    <string name="appointmentNumberContent">123456</string>
+    <string name="businessHours">营业时间</string>
+    <string name="businessHoursContent">09:00 – 17:00</string>
+    <string name="phone">电话</string>
+    <string name="phoneContent">029 – 87652396</string>
+    <string name="kindlyReminder">温馨提示：\n\t\t\t\t请您合理安排行程，携带相关证件和银行卡，前往该网点取号，过号作废。您可在网点叫号机上输入预约手机号或咨询网点大堂经理协助您取号及办理业务。感谢您光临中国银行！</string>
+    <string name="returnHomepage">返回首页</string>
+    <string name="sending">发送中</string>
+    <string name="sendMessageFail">消息发送失败</string>
+    <string name="wearNotConnect">穿戴设备未连接</string>
+    <string name="wearThirdApplicationNotInstall">穿戴设备侧第三方应用未安装</string>
+    <string name="userCancelAuthorization">用户取消授权</string>
+    <string name="requestPermissionFail">请求权限失败</string>
+    <string name="tryAgain">再试一下</string>
+    <!--string-array-->
+    <string-array name="drawUseArray" translatable="false">
+        <item>投资</item>
+        <item>购物</item>
+        <item>其它</item>
+    </string-array>
+    <string-array name="drawAccountNumberArray" translatable="false">
+        <item>6217 ****** 5678</item>
+        <item>6215 ****** 2548</item>
+    </string-array>
+</resources>
