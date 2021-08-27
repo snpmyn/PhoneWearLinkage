@@ -1,7 +1,10 @@
 package com.bocop.fem.application;
+
 import android.app.Activity;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
+
 import com.bocop.fem.BuildConfig;
 import com.bocop.fem.value.Folder;
 import com.chaos.basic.BasicApp;
@@ -13,11 +16,15 @@ import com.tencent.mmkv.MMKVContentChangeNotification;
 import com.tencent.mmkv.MMKVHandler;
 import com.tencent.mmkv.MMKVLogLevel;
 import com.tencent.mmkv.MMKVRecoverStrategic;
+
 import org.jetbrains.annotations.NotNull;
+
 import configure.FragmentationInitConfig;
 import timber.log.Timber;
+
 /**
  * Created on 2021/8/13
+ *
  * @author zsp
  * @desc 应用
  */
@@ -34,6 +41,7 @@ public class App extends BasicApp implements MMKVHandler, MMKVContentChangeNotif
         // 初始化配置
         initConfiguration();
     }
+
     /**
      * 初始化配置
      */
@@ -49,6 +57,7 @@ public class App extends BasicApp implements MMKVHandler, MMKVContentChangeNotif
         // Fragmentation
         FragmentationInitConfig.initFragmentation(BuildConfig.DEBUG);
     }
+
     /**
      * Activity 全局监听
      */
@@ -59,26 +68,32 @@ public class App extends BasicApp implements MMKVHandler, MMKVContentChangeNotif
                 // 添监听到创事件 Activity 至集合
                 ActivitySuperviseManager.getInstance().pushActivity(activity);
             }
+
             @Override
             public void onActivityStarted(@NonNull Activity activity) {
 
             }
+
             @Override
             public void onActivityResumed(@NonNull Activity activity) {
 
             }
+
             @Override
             public void onActivityPaused(@NonNull Activity activity) {
 
             }
+
             @Override
             public void onActivityStopped(@NonNull Activity activity) {
 
             }
+
             @Override
             public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle bundle) {
 
             }
+
             @Override
             public void onActivityDestroyed(@NonNull Activity activity) {
                 // 移监听到销事件 Activity 出集合
@@ -86,22 +101,27 @@ public class App extends BasicApp implements MMKVHandler, MMKVContentChangeNotif
             }
         });
     }
+
     @Override
     public void onContentChangedByOuterProcess(String s) {
         Timber.i("[content changed] %s", s);
     }
+
     @Override
     public MMKVRecoverStrategic onMMKVCRCCheckFail(String s) {
         return MMKVRecoverStrategic.OnErrorRecover;
     }
+
     @Override
     public MMKVRecoverStrategic onMMKVFileLengthError(String s) {
         return MMKVRecoverStrategic.OnErrorRecover;
     }
+
     @Override
     public boolean wantLogRedirecting() {
         return true;
     }
+
     @Override
     public void mmkvLog(@NotNull MMKVLogLevel mmkvLogLevel, String s, int i, String s1, String s2) {
         String log = ("< " + s + " : " + i + " :: " + s1 + " > " + s2);

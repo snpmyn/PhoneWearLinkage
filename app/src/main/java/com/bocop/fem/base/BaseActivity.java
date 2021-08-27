@@ -1,12 +1,17 @@
 package com.bocop.fem.base;
+
 import android.os.Bundle;
 import android.view.KeyEvent;
+
 import com.bocop.fem.R;
 import com.bocop.fem.value.Magic;
 import com.chaos.util.java.activity.ActivitySuperviseManager;
+
 import butterknife.ButterKnife;
+
 /**
  * Created on 2021/8/16
+ *
  * @author zsp
  * @desc BaseActivity
  * 启应用后 {@link com.bocop.fem.MainActivity} 直存至应用杀死时销毁。
@@ -14,6 +19,7 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends com.chaos.litepool.BaseActivity {
     /**
      * 加载视图
+     *
      * @param savedInstanceState 状态保存
      * @param layoutResId        布局资源 ID
      */
@@ -22,9 +28,11 @@ public abstract class BaseActivity extends com.chaos.litepool.BaseActivity {
         setContentView(layoutResId);
         ButterKnife.bind(this);
     }
+
     /**
-     * 双退
+     * onKeyUp
      * <p>
+     *
      * @param keyCode 键码值
      * @param event   键事件
      * @return boolean
@@ -38,7 +46,7 @@ public abstract class BaseActivity extends com.chaos.litepool.BaseActivity {
                 return true;
             }
             if (Magic.STRING_MAIN_ACTIVITY.equals(ActivitySuperviseManager.getInstance().getCurrentRunningActivityName(this))) {
-               ActivitySuperviseManager.getInstance().twoClickToExit(getString(R.string.exitAppHint));
+                ActivitySuperviseManager.getInstance().twoClickToExit(getString(R.string.exitAppHint));
                 return true;
             }
         }
