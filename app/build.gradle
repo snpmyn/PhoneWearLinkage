@@ -56,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.snpmyn.Chaos:litepool:v0.0.15.8-alpha'
+    implementation 'com.github.snpmyn.Chaos:litepool:v0.0.15.9-alpha'
     /*chaos*/
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
