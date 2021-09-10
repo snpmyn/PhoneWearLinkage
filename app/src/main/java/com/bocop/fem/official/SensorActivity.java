@@ -27,6 +27,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bocop.fem.R;
+import com.chaos.util.java.intent.IntentVerify;
+import com.chaos.util.java.list.ListUtils;
 import com.huawei.wearengine.HiWear;
 import com.huawei.wearengine.device.Device;
 import com.huawei.wearengine.sensor.DataResult;
@@ -47,10 +49,10 @@ import java.util.List;
  */
 public class SensorActivity extends AppCompatActivity {
     private static final int SCROLL_HIGH = 50;
+    private final List<Sensor> mSensorList = new ArrayList<>();
     private SensorClient mSensorClient;
     private Device mCurrentReadDevice;
     private Sensor mSensor;
-    private final List<Sensor> mSensorList = new ArrayList<>();
     private TextView sensorResultTextView;
     private RadioGroup sensorsRadioGroup;
 
@@ -62,7 +64,7 @@ public class SensorActivity extends AppCompatActivity {
         sensorsRadioGroup = findViewById(R.id.sensor_radio_group);
         TextView deviceNameTextView = findViewById(R.id.textView_device_name);
         mSensorClient = HiWear.getSensorClient(this);
-        mCurrentReadDevice = getIntent().getParcelableExtra("currentDevice");
+        mCurrentReadDevice = IntentVerify.getParcelableExtra(getIntent(), "currentDevice");
         if (null == mCurrentReadDevice) {
             printOperationResult("mCurrentReadDevice is null.");
             return;
@@ -98,7 +100,7 @@ public class SensorActivity extends AppCompatActivity {
             return;
         }
         mSensorClient.getSensorList(mCurrentReadDevice).addOnSuccessListener(sensors -> {
-            if ((null == sensors) || (sensors.size() == 0)) {
+            if (ListUtils.listIsEmpty(sensors)) {
                 printOperationResult("getSensorList list is null or list size is 0.");
                 return;
             }

@@ -14,6 +14,7 @@ import com.bocop.fem.database.SubBranchInformationDataBaseTable;
 import com.bocop.fem.module.cash.WithdrawOrderResultActivity;
 import com.bocop.fem.value.Constant;
 import com.chaos.util.java.intent.IntentJump;
+import com.chaos.util.java.intent.IntentVerify;
 import com.chaos.util.java.toast.ToastKit;
 import com.chaos.widget.dialog.materialalertdialog.SingleChooseMaterialAlertDialogKit;
 import com.chaos.widget.materialdatepicker.MaterialDatePickerKit;
@@ -35,7 +36,7 @@ public class WithdrawOrderActivityKit {
      * @param withdrawOrderActivityTvAppointmentOutlet 预约网点
      */
     public void display(@NonNull AppCompatActivity appCompatActivity, TextView withdrawOrderActivityTvAppointmentOutlet) {
-        SubBranchInformationDataBaseTable subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) appCompatActivity.getIntent().getSerializableExtra(Constant.OUTLET);
+        SubBranchInformationDataBaseTable subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) IntentVerify.getSerializableExtra(appCompatActivity.getIntent(), Constant.OUTLET);
         if (subBranchInformationDataBaseTable != null) {
             withdrawOrderActivityTvAppointmentOutlet.setText(subBranchInformationDataBaseTable.getName());
         }

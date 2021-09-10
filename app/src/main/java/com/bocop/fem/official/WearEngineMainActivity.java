@@ -36,6 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.bocop.fem.R;
+import com.chaos.util.java.list.ListUtils;
 import com.huawei.wearengine.HiWear;
 import com.huawei.wearengine.auth.AuthCallback;
 import com.huawei.wearengine.auth.Permission;
@@ -80,20 +81,12 @@ public class WearEngineMainActivity extends AppCompatActivity {
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final int SCROLL_HIGH = 50;
     private static final String FINGER_PRINT = "com.bocop.watch_BGNTi0xttHSpG89/0lm+LBZV5haw5qBGoNCcjEDJybay3YWcgjRZHyTrkr1Ft2gxhbBFpOG6+RhUhVAtufkeCTE=";
+    private final List<Device> deviceList = new ArrayList<>();
+    private final Map<String, Device> deviceMap = new HashMap<>();
+    private final MonitorItem monitorItemType = MonitorItem.MONITOR_ITEM_CONNECTION;
     private RadioGroup devicesRadioGroup;
     private EditText messageEditText;
     private TextView logOutputTextView;
-    private EditText peerPkgNameEditText;
-    private P2pClient p2pClient;
-    private MonitorClient monitorClient;
-    private DeviceClient deviceClient;
-    private final List<Device> deviceList = new ArrayList<>();
-    private Device selectedDevice;
-    private Message sendMessage;
-    private final Map<String, Device> deviceMap = new HashMap<>();
-    private int index = 0;
-    private String peerPkgName;
-    private final MonitorItem monitorItemType = MonitorItem.MONITOR_ITEM_CONNECTION;
     private final Receiver receiver = message -> {
         if (null != message) {
             String data = new String(message.getData());
@@ -102,6 +95,14 @@ public class WearEngineMainActivity extends AppCompatActivity {
             printOperationResult("Receiver Message is null");
         }
     };
+    private EditText peerPkgNameEditText;
+    private P2pClient p2pClient;
+    private MonitorClient monitorClient;
+    private DeviceClient deviceClient;
+    private Device selectedDevice;
+    private Message sendMessage;
+    private int index = 0;
+    private String peerPkgName;
     private MonitorListener monitorListener = (resultCode, monitorItem, monitorData) -> {
         if ((null != monitorData) && (null != monitorItem)) {
             printOperationResult(
@@ -245,7 +246,7 @@ public class WearEngineMainActivity extends AppCompatActivity {
      */
     public void getBoundDevices(View view) {
         deviceClient.getBondedDevices().addOnSuccessListener(devices -> {
-            if ((null == devices) || (devices.size() == 0)) {
+            if (ListUtils.listIsEmpty(devices)) {
                 WearEngineMainActivity.this.printOperationResult("getBondedDevices list is null or list size is 0");
                 return;
             }

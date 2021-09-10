@@ -13,7 +13,6 @@ import com.tencent.mmkv.MMKVHandler;
 import com.tencent.mmkv.MMKVLogLevel;
 import com.tencent.mmkv.MMKVRecoverStrategic;
 
-import configure.FragmentationInitConfig;
 import timber.log.Timber;
 
 /**
@@ -46,8 +45,6 @@ public class App extends LitePoolApp implements MMKVHandler, MMKVContentChangeNo
         CrashManagerInitConfigure.getInstance(this, Folder.CRASH);
         // LitePal
         LitePalInitConfigure.initLitePal(this);
-        // Fragmentation
-        FragmentationInitConfig.initFragmentation(BuildConfig.DEBUG);
     }
 
     @Override

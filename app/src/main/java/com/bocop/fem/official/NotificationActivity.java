@@ -27,6 +27,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bocop.fem.R;
+import com.chaos.util.java.intent.IntentVerify;
 import com.huawei.wearengine.HiWear;
 import com.huawei.wearengine.device.Device;
 import com.huawei.wearengine.notify.Action;
@@ -91,8 +92,8 @@ public class NotificationActivity extends AppCompatActivity {
      * Init data.
      */
     private void initData() {
-        checkedDevice = getIntent().getParcelableExtra("currentDevice");
-        String packageName = getIntent().getStringExtra("packageName");
+        checkedDevice = IntentVerify.getParcelableExtra(getIntent(), "currentDevice");
+        String packageName = IntentVerify.getStringExtra(getIntent(), "packageName");
         if (null != packageName) {
             etPackage.setText(packageName);
         }

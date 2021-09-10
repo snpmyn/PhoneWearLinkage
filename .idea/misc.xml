@@ -5,9 +5,16 @@
       <map>
         <entry key="app/src/main/res/drawable/color_91b2f5_solid_left_circle.xml" value="0.25555555555555554" />
         <entry key="app/src/main/res/drawable/gray_solid_r6.xml" value="0.203125" />
+        <entry key="app/src/main/res/drawable/ic_arrow_drop_down_font_hint_16dp.xml" value="0.31296296296296294" />
+        <entry key="app/src/main/res/drawable/ic_arrow_forward_ios_font_input_16dp.xml" value="0.31296296296296294" />
         <entry key="app/src/main/res/drawable/ic_check_circle_color_6aaeff_24dp.xml" value="0.203125" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.31296296296296294" />
+        <entry key="app/src/main/res/drawable/ic_local_phone_font_hint_16dp.xml" value="0.3296296296296296" />
+        <entry key="app/src/main/res/drawable/ic_local_phone_font_input_20dp.xml" value="0.3296296296296296" />
+        <entry key="app/src/main/res/drawable/ic_location_on_font_hint_16dp.xml" value="0.3296296296296296" />
         <entry key="app/src/main/res/drawable/ic_near_me_color_0579f5_20dp.xml" value="0.203125" />
         <entry key="app/src/main/res/drawable/page_background_solid_r6.xml" value="0.35444330949948927" />
+        <entry key="app/src/main/res/drawable/preview_window.xml" value="0.31296296296296294" />
         <entry key="app/src/main/res/drawable/white_solid_r6.xml" value="0.33240740740740743" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16523713420787084" />
         <entry key="app/src/main/res/layout/activity_notify.xml" value="0.16523713420787084" />

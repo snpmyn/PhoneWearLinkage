@@ -12,6 +12,7 @@ import com.bocop.fem.module.cash.WithdrawOrderActivity;
 import com.bocop.fem.value.Constant;
 import com.chaos.litepal.kit.LitePalKit;
 import com.chaos.util.java.intent.IntentJump;
+import com.chaos.util.java.intent.IntentVerify;
 import com.chaos.util.java.toast.ToastKit;
 import com.chaos.widget.choose.provincialandurbanlinkage.Location;
 import com.chaos.widget.choose.provincialandurbanlinkage.ProvincialAndUrbanLinkage;
@@ -79,8 +80,8 @@ public class MainActivityKit {
     public void display(AppCompatActivity appCompatActivity, int flag, TextView mainActivityTvName, TextView mainActivityTvAddress, DrawableCenterTextView mainActivityDctvCurrentDistance, TextView mainActivityTvQueQueue) {
         if (flag == 0) {
             subBranchInformationDataBaseTable = LitePalKit.getInstance().findFirst(SubBranchInformationDataBaseTable.class);
-        } else if ((flag == 1) && (null != appCompatActivity.getIntent().getSerializableExtra(Constant.OUTLET))) {
-            subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) appCompatActivity.getIntent().getSerializableExtra(Constant.OUTLET);
+        } else if ((flag == 1) && (null != IntentVerify.getSerializableExtra(appCompatActivity.getIntent(), Constant.OUTLET))) {
+            subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) IntentVerify.getSerializableExtra(appCompatActivity.getIntent(), Constant.OUTLET);
         }
         if (null != subBranchInformationDataBaseTable) {
             mainActivityTvName.setText(subBranchInformationDataBaseTable.getName());
@@ -120,7 +121,7 @@ public class MainActivityKit {
     /**
      * 选择其它网点
      *
-     * @param provincialAndUrbanLinkage 省市区联动
+     * @param provincialAndUrbanLinkage 省市x区联动
      * @param location                  定位
      */
     public void chooseOtherOutlets(@NonNull ProvincialAndUrbanLinkage provincialAndUrbanLinkage, Location location) {

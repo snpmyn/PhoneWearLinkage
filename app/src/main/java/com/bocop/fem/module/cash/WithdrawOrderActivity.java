@@ -12,6 +12,7 @@ import com.bocop.fem.base.BaseActivity;
 import com.bocop.fem.database.SubBranchInformationDataBaseTable;
 import com.bocop.fem.module.cash.kit.WithdrawOrderActivityKit;
 import com.bocop.fem.value.Constant;
+import com.chaos.util.java.intent.IntentVerify;
 import com.chaos.util.java.statusbar.StatusBarUtils;
 import com.chaos.util.java.toast.ToastKit;
 import com.chaos.widget.textview.DrawableCenterTextView;
@@ -86,7 +87,7 @@ public class WithdrawOrderActivity extends BaseActivity {
     @Override
     protected void initConfiguration() {
         withdrawOrderActivityKit = new WithdrawOrderActivityKit();
-        subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) getIntent().getSerializableExtra(Constant.OUTLET);
+        subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) IntentVerify.getSerializableExtra(getIntent(), Constant.OUTLET);
     }
 
     /**

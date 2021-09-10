@@ -200,7 +200,7 @@
                     android:importantForAutofill="no"
                     android:inputType="number"
                     android:text="@string/withdrawAmountContent"
-                    android:textColor="@color/red"
+                    android:textColor="@color/color_EB6B6B"
                     android:textColorHint="@color/fontHint"
                     android:textSize="@dimen/sp_16"
                     android:textStyle="bold" />
@@ -216,7 +216,7 @@
                 android:paddingRight="@dimen/dp_12"
                 android:paddingBottom="@dimen/dp_18"
                 android:text="@string/withdrawAmountHintBottom"
-                android:textColor="@color/red"
+                android:textColor="@color/color_EB6B6B"
                 android:textSize="@dimen/sp_12" />
 
             <LinearLayout

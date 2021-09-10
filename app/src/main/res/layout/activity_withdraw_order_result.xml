@@ -192,7 +192,7 @@
                 android:paddingTop="@dimen/dp_20"
                 android:paddingBottom="@dimen/dp_20"
                 android:text="@string/returnHomepage"
-                android:textColor="@color/red"
+                android:textColor="@color/color_EB6B6B"
                 android:textSize="@dimen/sp_14" />
         </LinearLayout>
     </ScrollView>

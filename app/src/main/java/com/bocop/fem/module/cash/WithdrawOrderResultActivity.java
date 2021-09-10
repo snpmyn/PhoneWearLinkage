@@ -13,6 +13,7 @@ import com.bocop.fem.database.SubBranchInformationDataBaseTable;
 import com.bocop.fem.module.cash.kit.WithdrawOrderResultActivityKit;
 import com.bocop.fem.utils.HiWearHandleKit;
 import com.bocop.fem.value.Constant;
+import com.chaos.util.java.intent.IntentVerify;
 import com.chaos.util.java.statusbar.StatusBarUtils;
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -76,7 +77,7 @@ public class WithdrawOrderResultActivity extends BaseActivity {
     @Override
     protected void initConfiguration() {
         withdrawOrderResultActivityKit = new WithdrawOrderResultActivityKit();
-        subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) getIntent().getSerializableExtra(Constant.OUTLET);
+        subBranchInformationDataBaseTable = (SubBranchInformationDataBaseTable) IntentVerify.getSerializableExtra(getIntent(), Constant.OUTLET);
     }
 
     /**
